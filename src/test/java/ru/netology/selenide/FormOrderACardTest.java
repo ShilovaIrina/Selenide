@@ -19,7 +19,7 @@ public class FormOrderACardTest {
     @Test
     public void formACardTest() {
         Selenide.open("http://localhost:9999");
-        $(".input__control").setValue("Горно-Алтайск");
+        $("[data-test-id='city'] input").setValue("Горно-Алтайск");
         String plannerDate = generateDate(4, "dd.MM.yyyy");
         // операция по очистке поля "Дата"
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
